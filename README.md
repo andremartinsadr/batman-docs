@@ -80,4 +80,4 @@ Os diagramas e detalhes da modelagem estão em [`docs/modelagem.md`](docs/modela
 
 ## Relatório técnico
 
-O [relatório técnico do projeto](Relatorio_Tecnico.md) reúne os diagramas de casos de uso, classes e entidade-relacionamento, além de capturas das páginas e modais em execução *(também disponível para [download em .docx](Relatorio_Tecnico_Projeto_Batman.docx?raw=true))*. Os arquivos-fonte dos diagramas e as capturas estão em `assets/`.
+O [relatório técnico do projeto](Relatorio_Tecnico.md) reúne os diagramas de casos de uso, classes e entidade-relacionamento, além de capturas das páginas e modais em execução *(também disponível para [download em .docx](https://raw.githubusercontent.com/andremartinsadr/batman-docs/main/Relatorio_Tecnico_Projeto_Batman.docx))*. Os arquivos-fonte dos diagramas e as capturas estão em `assets/`.
