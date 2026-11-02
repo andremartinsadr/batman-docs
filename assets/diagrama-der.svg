@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650">
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #172033; }
+      .title { font-size: 30px; font-weight: 700; }
+      .subtitle { font-size: 16px; fill: #64748b; }
+      .table { fill: #fff; stroke: #334155; stroke-width: 2; }
+      .head { fill: #172033; }
+      .headtext { font-size: 21px; font-weight: 700; fill: #fff; }
+      .field { font-size: 18px; }
+      .type { font-size: 16px; fill: #475569; }
+      .key { font-size: 14px; font-weight: 700; fill: #991b1b; }
+      .line { stroke: #cbd5e1; stroke-width: 1.5; }
+      .note { font-size: 16px; fill: #475569; }
+    </style>
+  </defs>
+  <rect width="1100" height="650" fill="#f1f5f9"/>
+  <text x="550" y="55" text-anchor="middle" class="title">Diagrama Entidade-Relacionamento (DER)</text>
+  <text x="550" y="83" text-anchor="middle" class="subtitle">Banco batman_db</text>
+
+  <g transform="translate(255 125)">
+    <rect width="590" height="405" rx="10" class="table"/>
+    <path d="M0 10 Q0 0 10 0 H580 Q590 0 590 10 V64 H0 Z" class="head"/>
+    <text x="295" y="41" text-anchor="middle" class="headtext">comentarios</text>
+
+    <line x1="0" y1="121" x2="590" y2="121" class="line"/>
+    <text x="28" y="101" class="field">id</text>
+    <text x="215" y="101" class="type">INT AUTO_INCREMENT</text>
+    <text x="500" y="101" class="key">PK</text>
+
+    <line x1="0" y1="177" x2="590" y2="177" class="line"/>
+    <text x="28" y="157" class="field">nome</text>
+    <text x="215" y="157" class="type">VARCHAR(100) NOT NULL</text>
+
+    <line x1="0" y1="233" x2="590" y2="233" class="line"/>
+    <text x="28" y="213" class="field">email</text>
+    <text x="215" y="213" class="type">VARCHAR(100) NOT NULL</text>
+
+    <line x1="0" y1="289" x2="590" y2="289" class="line"/>
+    <text x="28" y="269" class="field">mensagem</text>
+    <text x="215" y="269" class="type">TEXT NOT NULL</text>
+
+    <line x1="0" y1="345" x2="590" y2="345" class="line"/>
+    <text x="28" y="325" class="field">nota</text>
+    <text x="215" y="325" class="type">TINYINT UNSIGNED (1 a 5)</text>
+
+    <text x="28" y="382" class="field">data_criacao</text>
+    <text x="215" y="382" class="type">TIMESTAMP DEFAULT CURRENT_TIMESTAMP</text>
+  </g>
+  <text x="550" y="573" text-anchor="middle" class="note">Uma entidade; sem relacionamentos com outras tabelas.</text>
+  <text x="550" y="604" text-anchor="middle" class="note">Chave primária: id · Restrições de preenchimento conforme schema.sql</text>
+</svg>

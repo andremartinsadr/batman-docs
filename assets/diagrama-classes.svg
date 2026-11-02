@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #172033; }
+      .title { font-size: 30px; font-weight: 700; }
+      .subtitle { font-size: 16px; fill: #64748b; }
+      .box { fill: #fff; stroke: #334155; stroke-width: 2; }
+      .head { fill: #172033; }
+      .headtext { font-size: 19px; font-weight: 700; fill: #fff; }
+      .body { font-size: 16px; }
+      .rule { stroke: #cbd5e1; stroke-width: 1.5; }
+      .relation { stroke: #b91c1c; stroke-width: 2.5; fill: none; }
+      .reltext { font-size: 14px; fill: #7f1d1d; font-weight: 600; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#b91c1c"/>
+    </marker>
+  </defs>
+  <rect width="1400" height="820" fill="#f1f5f9"/>
+  <text x="700" y="48" text-anchor="middle" class="title">Diagrama de Classes (UML)</text>
+  <text x="700" y="76" text-anchor="middle" class="subtitle">Camadas da API de comentários</text>
+
+  <g class="relation" marker-end="url(#arrow)">
+    <path d="M510 228 L430 335"/>
+    <path d="M445 440 L510 440"/>
+    <path d="M900 440 L955 440"/>
+    <path d="M1125 548 L780 660"/>
+  </g>
+  <text x="410" y="285" class="reltext">monta</text>
+  <text x="443" y="425" class="reltext">encaminha</text>
+  <text x="905" y="425" class="reltext">consulta</text>
+  <text x="917" y="623" class="reltext">persiste / lista</text>
+
+  <g transform="translate(510 110)">
+    <rect width="380" height="118" rx="8" class="box"/>
+    <path d="M0 8 Q0 0 8 0 H372 Q380 0 380 8 V43 H0 Z" class="head"/>
+    <text x="190" y="29" text-anchor="middle" class="headtext">ExpressServer</text>
+    <line x1="0" y1="43" x2="380" y2="43" class="rule"/>
+    <text x="18" y="70" class="body">+ servirArquivosEstaticos()</text>
+    <text x="18" y="98" class="body">+ montarRotasAPI()</text>
+  </g>
+
+  <g transform="translate(65 335)">
+    <rect width="380" height="210" rx="8" class="box"/>
+    <path d="M0 8 Q0 0 8 0 H372 Q380 0 380 8 V43 H0 Z" class="head"/>
+    <text x="190" y="29" text-anchor="middle" class="headtext">ComentarioRoutes</text>
+    <line x1="0" y1="43" x2="380" y2="43" class="rule"/>
+    <text x="18" y="76" class="body">+ GET /api/comentarios</text>
+    <text x="18" y="105" class="body">+ POST /api/comentarios</text>
+    <line x1="0" y1="128" x2="380" y2="128" class="rule"/>
+    <text x="18" y="159" class="body">Encaminha requisições HTTP</text>
+    <text x="18" y="188" class="body">para o controller.</text>
+  </g>
+
+  <g transform="translate(510 335)">
+    <rect width="390" height="210" rx="8" class="box"/>
+    <path d="M0 8 Q0 0 8 0 H382 Q390 0 390 8 V43 H0 Z" class="head"/>
+    <text x="195" y="29" text-anchor="middle" class="headtext">ComentarioController</text>
+    <line x1="0" y1="43" x2="390" y2="43" class="rule"/>
+    <text x="18" y="76" class="body">+ criarComentario(req, res)</text>
+    <text x="18" y="105" class="body">+ obterComentarios(req, res)</text>
+    <line x1="0" y1="128" x2="390" y2="128" class="rule"/>
+    <text x="18" y="159" class="body">Valida dados e prepara</text>
+    <text x="18" y="188" class="body">respostas da API.</text>
+  </g>
+
+  <g transform="translate(955 335)">
+    <rect width="380" height="210" rx="8" class="box"/>
+    <path d="M0 8 Q0 0 8 0 H372 Q380 0 380 8 V43 H0 Z" class="head"/>
+    <text x="190" y="29" text-anchor="middle" class="headtext">Comentario</text>
+    <line x1="0" y1="43" x2="380" y2="43" class="rule"/>
+    <text x="18" y="76" class="body">+ salvar(nome, email,</text>
+    <text x="36" y="101" class="body">mensagem, nota)</text>
+    <text x="18" y="128" class="body">+ listarTodos()</text>
+    <line x1="0" y1="148" x2="380" y2="148" class="rule"/>
+    <text x="18" y="179" class="body">Executa consultas parametrizadas.</text>
+  </g>
+
+  <g transform="translate(510 660)">
+    <rect width="390" height="120" rx="8" class="box"/>
+    <path d="M0 8 Q0 0 8 0 H382 Q390 0 390 8 V43 H0 Z" fill="#7f1d1d"/>
+    <text x="195" y="29" text-anchor="middle" class="headtext">MySQLDatabase</text>
+    <line x1="0" y1="43" x2="390" y2="43" class="rule"/>
+    <text x="18" y="72" class="body">+ execute(sql, parametros)</text>
+    <text x="18" y="101" class="body">Banco batman_db / tabela comentarios</text>
+  </g>
+</svg>

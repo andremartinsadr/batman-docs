@@ -23,7 +23,37 @@ flowchart LR
     model --> db
 ```
 
+## Diagrama de casos de uso
+
+O visitante pode navegar pelo site, assistir ao trailer, consultar o elenco, simular a compra de ingressos e publicar ou consultar avaliações. A persistência e a consulta de comentários usam o banco MySQL.
+
+![Diagrama de casos de uso do Sistema Batman](../assets/diagrama-casos-de-uso.svg)
+
+```mermaid
+flowchart LR
+    visitante([Visitante])
+    subgraph sistema["Sistema Batman"]
+        navegar((Navegar pelas páginas))
+        trailer((Assistir ao trailer))
+        elenco((Consultar elenco e detalhes))
+        ingressos((Simular compra de ingressos))
+        publicar((Publicar comentário e avaliação))
+        consultar((Consultar e ordenar comentários))
+    end
+    banco[(MySQL)]
+    visitante --- navegar
+    visitante --- trailer
+    visitante --- elenco
+    visitante --- ingressos
+    visitante --- publicar
+    visitante --- consultar
+    publicar --- banco
+    consultar --- banco
+```
+
 ## Diagrama de classes (UML)
+
+![Diagrama visual de classes da API de comentários](../assets/diagrama-classes.svg)
 
 ```mermaid
 classDiagram
@@ -56,6 +86,8 @@ classDiagram
 ## Diagrama entidade-relacionamento (DER)
 
 O esquema atual possui uma entidade. Cada comentário guarda nome, e-mail, mensagem, nota e data de criação. Não há relacionamentos com outras entidades.
+
+![Diagrama visual entidade-relacionamento da tabela comentarios](../assets/diagrama-der.svg)
 
 ```mermaid
 erDiagram

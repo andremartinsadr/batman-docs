@@ -77,3 +77,7 @@ public/                           Páginas, estilos, imagens e scripts do site
 ```
 
 Os diagramas e detalhes da modelagem estão em [`docs/modelagem.md`](docs/modelagem.md).
+
+## Relatório técnico
+
+O [relatório técnico do projeto](Relatorio_Tecnico_Projeto_Batman.docx) reúne os diagramas de casos de uso, classes e entidade-relacionamento, além de capturas das páginas e modais em execução. Os arquivos-fonte dos diagramas e as capturas estão em [`assets/`](assets/).
