@@ -62,7 +62,7 @@ O diagrama apresenta as principais partes da API de comentários e suas responsa
 
 ## 4. Arquivos para Download
 
-- [Baixar relatório completo em DOCX](https://raw.githubusercontent.com/andremartinsadr/batman-docs/main/Relatorio_Tecnico_Projeto_Batman.docx)
+- [Baixar relatório completo em DOCX](Relatorio_Tecnico_Projeto_Batman.docx?raw=true)
 - [Ler este relatório em Markdown no GitHub](https://github.com/andremartinsadr/batman-docs/blob/main/Relatorio_Tecnico.md)
 
 ## 5. Capturas das Telas em Execução
